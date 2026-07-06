@@ -1,11 +1,14 @@
 [build]
 builder = "nixpacks"
 
+[build.nixpacksPlan.phases.setup]
+nixPkgs = ["dotnet-sdk_10"]
+
 [build.nixpacksPlan.phases.build]
 cmds = [
   "dotnet restore",
-  "dotnet publish -c Release -o out"
+  "dotnet publish -c Release -o /app/out"
 ]
 
 [deploy]
-startCommand = "dotnet out/MovieApi.dll"
+startCommand = "dotnet /app/out/MovieApi.dll"
