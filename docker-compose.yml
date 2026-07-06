@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  movie-api:
+    build:
+      context: ./backend/MovieApi
+    ports:
+      - "5000:8080"
+
+  movie-frontend:
+    build:
+      context: ./frontend/movie-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - movie-api
