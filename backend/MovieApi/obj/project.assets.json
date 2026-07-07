@@ -2,6 +2,35 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "AWSSDK.Core/4.0.100.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AWSSDK.Kinesis/4.0.100.2": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[4.0.100.2, 5.0.0)"
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.Kinesis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Kinesis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.9": {
         "type": "package",
         "dependencies": {
@@ -169,6 +198,53 @@
     }
   },
   "libraries": {
+    "AWSSDK.Core/4.0.100.2": {
+      "sha512": "1hz6lB2Meymkv9rdOy30p5pIbGpYLK0H4O8XUMGwEMmXUB4FJhyTNk69dLWIFdDUrY66h0NyKy9maHKXMRTwJA==",
+      "type": "package",
+      "path": "awssdk.core/4.0.100.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.4.0.100.2.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "images/AWSLogo.png",
+        "lib/net472/AWSSDK.Core.dll",
+        "lib/net472/AWSSDK.Core.xml",
+        "lib/net8.0/AWSSDK.Core.dll",
+        "lib/net8.0/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.Kinesis/4.0.100.2": {
+      "sha512": "czZIPxT1sB6pwEbdSl5gbeBWDT3ofCxwsDloK7AH5KVeivRIGta7pXp9eUXUUjNs5hkQmrhjzzHl0JWgAMcVAw==",
+      "type": "package",
+      "path": "awssdk.kinesis/4.0.100.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.Kinesis.CodeAnalysis.dll",
+        "analyzers/dotnet/cs/SharedAnalysisCode.dll",
+        "awssdk.kinesis.4.0.100.2.nupkg.sha512",
+        "awssdk.kinesis.nuspec",
+        "images/AWSLogo.png",
+        "lib/net472/AWSSDK.Kinesis.dll",
+        "lib/net472/AWSSDK.Kinesis.xml",
+        "lib/net8.0/AWSSDK.Kinesis.dll",
+        "lib/net8.0/AWSSDK.Kinesis.xml",
+        "lib/netcoreapp3.1/AWSSDK.Kinesis.dll",
+        "lib/netcoreapp3.1/AWSSDK.Kinesis.xml",
+        "lib/netstandard2.0/AWSSDK.Kinesis.dll",
+        "lib/netstandard2.0/AWSSDK.Kinesis.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/10.0.9": {
       "sha512": "1ihb8FO9cGgEK1/m3CTtT/SfnynwmiZib0W2pcDVj3KSWk/Sca4VOXEtaptKQc582zpFrzTFiwkGRCglt6H+WQ==",
       "type": "package",
@@ -605,6 +681,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AWSSDK.Kinesis >= 4.0.100.2",
+      "AWSSDK.core >= 4.0.100.2",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
       "Microsoft.EntityFrameworkCore.InMemory >= 10.0.9",
       "Swashbuckle.AspNetCore >= 10.2.3"
@@ -655,6 +733,14 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "AWSSDK.Kinesis": {
+            "target": "Package",
+            "version": "[4.0.100.2, )"
+          },
+          "AWSSDK.core": {
+            "target": "Package",
+            "version": "[4.0.100.2, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.9, )"

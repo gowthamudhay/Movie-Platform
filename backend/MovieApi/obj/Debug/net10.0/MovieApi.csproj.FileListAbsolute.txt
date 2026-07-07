@@ -37,3 +37,6 @@ D:\movie-app\backend\MovieApi\obj\Debug\net10.0\refint\MovieApi.dll
 D:\movie-app\backend\MovieApi\obj\Debug\net10.0\MovieApi.pdb
 D:\movie-app\backend\MovieApi\obj\Debug\net10.0\MovieApi.genruntimeconfig.cache
 D:\movie-app\backend\MovieApi\obj\Debug\net10.0\ref\MovieApi.dll
+D:\movie-app\backend\MovieApi\bin\Debug\net10.0\AWSSDK.Core.dll
+D:\movie-app\backend\MovieApi\bin\Debug\net10.0\AWSSDK.Kinesis.dll
+D:\movie-app\backend\MovieApi\obj\Debug\net10.0\MovieApi.sourcelink.json

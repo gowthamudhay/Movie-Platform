@@ -8,6 +8,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
 
+builder.Services.AddSingleton<MovieApi.Services.KinesisService>();
+
 builder.Services.AddDbContext<MovieContext>(options =>
     options.UseInMemoryDatabase("MoviesDb"));
 

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pN5tYpcU8nU=",
+  "dgSpecHash": "f6FW8PKRqAM=",
   "success": true,
   "projectFilePath": "D:\\movie-app\\backend\\MovieApi\\MovieApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gowtham\\.nuget\\packages\\awssdk.core\\4.0.100.2\\awssdk.core.4.0.100.2.nupkg.sha512",
+    "C:\\Users\\Gowtham\\.nuget\\packages\\awssdk.kinesis\\4.0.100.2\\awssdk.kinesis.4.0.100.2.nupkg.sha512",
     "C:\\Users\\Gowtham\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.9\\microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
     "C:\\Users\\Gowtham\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.9\\microsoft.entityframeworkcore.10.0.9.nupkg.sha512",
     "C:\\Users\\Gowtham\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.9\\microsoft.entityframeworkcore.abstractions.10.0.9.nupkg.sha512",

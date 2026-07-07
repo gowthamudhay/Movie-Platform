@@ -8,12 +8,33 @@
     ".NETCoreApp,Version=v10.0": {
       "MovieApi/1.0.0": {
         "dependencies": {
+          "AWSSDK.Kinesis": "4.0.100.2",
+          "AWSSDK.Core": "4.0.100.2",
           "Microsoft.AspNetCore.OpenApi": "10.0.9",
           "Microsoft.EntityFrameworkCore.InMemory": "10.0.9",
           "Swashbuckle.AspNetCore": "10.2.3"
         },
         "runtime": {
           "MovieApi.dll": {}
+        }
+      },
+      "AWSSDK.Core/4.0.100.2": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.100.2"
+          }
+        }
+      },
+      "AWSSDK.Kinesis/4.0.100.2": {
+        "dependencies": {
+          "AWSSDK.Core": "4.0.100.2"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Kinesis.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.100.2"
+          }
         }
       },
       "Microsoft.AspNetCore.OpenApi/10.0.9": {
@@ -109,6 +130,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/4.0.100.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1hz6lB2Meymkv9rdOy30p5pIbGpYLK0H4O8XUMGwEMmXUB4FJhyTNk69dLWIFdDUrY66h0NyKy9maHKXMRTwJA==",
+      "path": "awssdk.core/4.0.100.2",
+      "hashPath": "awssdk.core.4.0.100.2.nupkg.sha512"
+    },
+    "AWSSDK.Kinesis/4.0.100.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-czZIPxT1sB6pwEbdSl5gbeBWDT3ofCxwsDloK7AH5KVeivRIGta7pXp9eUXUUjNs5hkQmrhjzzHl0JWgAMcVAw==",
+      "path": "awssdk.kinesis/4.0.100.2",
+      "hashPath": "awssdk.kinesis.4.0.100.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/10.0.9": {
       "type": "package",
