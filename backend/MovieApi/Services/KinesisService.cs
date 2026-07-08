@@ -11,14 +11,12 @@ public class KinesisService
     private readonly string _streamName = "movie-events-stream";
     private readonly ILogger<KinesisService> _logger;
 
-    public KinesisService(ILogger<KinesisService> logger, IConfiguration config)
+    public KinesisService(ILogger<KinesisService> logger)
     {
         _logger = logger;
-
-        // Use AWS credentials from environment or appsettings
         _client = new AmazonKinesisClient(
-            config["AWS:AccessKey"],
-            config["AWS:SecretKey"],
+            Environment.GetEnvironmentVariable("AWS_ACCESS_KEY_ID"),
+            Environment.GetEnvironmentVariable("AWS_SECRET_ACCESS_KEY"),
             Amazon.RegionEndpoint.USEast1
         );
     }
@@ -38,11 +36,13 @@ public class KinesisService
             };
 
             var response = await _client.PutRecordAsync(request);
-            _logger.LogInformation($"Event sent to Kinesis. ShardId: {response.ShardId}");
+            _logger.LogInformation(
+                $"Event sent to Kinesis. ShardId: {response.ShardId}"
+            );
         }
         catch (Exception ex)
         {
-            _logger.LogError($"Failed to send event to Kinesis: {ex.Message}");
+            _logger.LogError($"Failed to send to Kinesis: {ex.Message}");
         }
     }
 }

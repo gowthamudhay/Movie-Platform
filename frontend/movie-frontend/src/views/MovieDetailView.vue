@@ -12,9 +12,9 @@ onMounted(async () => {
     const res = await movieService.getById(route.params.id)
     movie.value = res.data
 
-    // FIRE EVENT TO KINESIS PIPELINE
-    await eventService.trackMovieView(res.data)
-    console.log('Event tracked for movie:', res.data.title)
+    // Fire event to Kinesis pipeline
+    eventService.trackMovieView(res.data)
+    console.log('Tracked view:', res.data.title)
 
   } finally {
     loading.value = false
