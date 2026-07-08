@@ -1,0 +1,37 @@
+# Node
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.local
+.vercel
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# .NET — IMPORTANT: keeps AWS keys out of git
+bin/
+obj/
+*.user
+
+# AWS keys — never commit these
+appsettings.json
+appsettings.Development.json
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
